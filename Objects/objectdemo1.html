@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript">
+            function student(rollno, name , subject)
+            {
+                this.rollno=rollno;
+                this.name=name;
+                this.subject=subject;
+                this.class=function()
+                {
+                    document.write("1st Division !!!");
+                }
+            }
+
+            var s1 = new student(1,"Roshan","Maths");
+            var s2 = new student(2,"Rohit","Science");
+            s1.class;
+            document.write(s2.subject);
+        </script>
+    </head>
+</html>
