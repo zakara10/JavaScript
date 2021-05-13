@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript">
+        /*
+            \d - match any digit(equal to [0-9])
+            \w - match any word character (a-z,A-Z,0-9)
+            \s - match whitespace character (eg - space & tabs)
+            \t - match a tab only
+        */
+            function validate()
+            {
+                var test = document.getElementById("text1").value;
+                var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9\.-]+).([a-z]{2,20})$/;
+                if(regx.test(text))
+                {
+                    document.getElementById("lbtext").innerHTML="valid";
+                    document.getElementById("lbtext").style.visibility="visible";
+                    document.getElementById("lbtext").style.color="green";
+                }
+                else{
+                    document.getElementById("lbtext").innerHTML="Invalid";
+                    document.getElementById("lbtext").style.visibility="visible";
+                    document.getElementById("lbtext").style.color="red";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input id="text1" placeholder="Email" type="text" /><br>
+            <label id="lbtext" style="color: red ; visibility: hidden">Invalid</label>
+            <br>
+            <button onclick="validate()" type ="button"> Submit</button>
+        </form>
+    </body>
+</html>
